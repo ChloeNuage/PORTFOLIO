@@ -1,0 +1,56 @@
+.home-div {
+  background-color: #F8F6F0;
+  height: 100vh;
+  padding: 20px;
+}
+
+.home-div h1 {
+  font-family: "Inter";
+  font-size: 50pt;
+  font-weight: 300;
+  color: #132FBA;
+  margin-bottom: 13%;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.home-div h2 {
+  font-family: "Inter";
+  font-size: 60pt;
+  font-weight: 800;
+  padding-left: 42%;
+  color: #132FBA;
+  margin: -2%;
+}
+
+.home-div h3 {
+  font-family: "Inter";
+  font-size: 60pt;
+  font-weight: 800;
+  padding-left: 52%;
+  color: #132FBA;
+}
+
+.home-div ul, li {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 300;
+  padding-left: 35%;
+  color: #132FBA;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 110%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
