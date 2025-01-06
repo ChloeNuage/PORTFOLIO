@@ -1,7 +1,8 @@
-<nav class="navbar">
-    <div class="navbar-left">
+
+  <nav class="navbar">
+    <div class="navbar-left" id="accueil">
       <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
-      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+      <a href="<%= root_path %>"><strong>[</strong> Chloé Bretnacher <strong>]</strong></a>
     </div>
     <ul class="navbar-menu">
       <li><a href="<%= about_path %>">About</a></li>
@@ -10,14 +11,14 @@
       <p> | <p>
       <li><a href="<%= contact_path %>">Contact</a></li>
     </ul>
-</nav>
+  </nav>
 
 <div class="pres-projet-div">
   <div class="pres-projet">
     <div class="portfolio-container">
         <div class="text-container">
             <h1>Spark</h1>
-            <p>Spark est initialement un projet de recherche réalisé à l'occasion de mon mémoire de Master of Arts en Design stratégique (2021). C’est une application qui permet aux potentiels adoptants de matcher avec les animaux des refuges de sa région. À l’occasion du projet d’application web pour le bootcamp du Wagon, j’ai pu présenter ce projet et il a été sélectionné pour être développé lors des deux dernières semaines de formation en équipe de cinq.
+            <p>Spark est initialement un projet de recherche réalisé à l'occasion de mon mémoire de Master of Arts en Design stratégique (2021). C’est une application qui permet aux potentiels adoptants de matcher avec les animaux des refuges de sa région.À l’occasion du projet d’application web pour le bootcamp du Wagon, j’ai pu présenter ce projet et il a été sélectionné pour être développé lors des deux dernières semaines de formation en équipe de cinq.
             Le projet a ensuite été présenté devant un public à l’occasion du Démo Day du 6 décembre 2024.<br><br>
             Nous avons complètement repensé le design de l’application avec une nouvelle charte graphique et de nouvelles illustrations.<br><br>
             Concernant ses fonctionnalités, nous retrouvons:<br>
@@ -36,13 +37,56 @@
             <a href="<%= projects_path %>">Retour aux projets</a>
         </div>
 
-        <div class="carousel-container">
-            <div class="carousel">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
+        <div class="padding-carousel">
+          <!-- Carrousel -->
+          <div class="carousel-container">
+            <div class="main-image">
+              <img id="mainImage" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176456/1_hago1x.jpg" alt="Image principale">
             </div>
+          </div>
+
+          <!-- Miniatures -->
+          <div class="thumbnail-container">
+            <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176456/1_hago1x.jpg" alt="Image 1">
+            <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176457/2_itq5a9.jpg" alt="Image 2">
+            <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176471/Gray_and_White_Minimalist_Desktop_Mockup_Instagram_Post_zwi8uw.png" alt="Image 3">
+            <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176457/4_zmzfzg.jpg" alt="Image 4">
+            <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176457/3_uugddh.jpg" alt="Image 5">
+          </div>
         </div>
     </div>
   </div>
 </div>
+
+
+
+<!-- JavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Récupérer l'image principale et toutes les miniatures
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    // Fonction pour mettre à jour l'image principale et les miniatures
+    function changeMainImage(thumbnail) {
+      // Met à jour la source de l'image principale
+      mainImage.src = thumbnail.src;
+
+      // Supprime la classe "selected" des autres miniatures
+      thumbnails.forEach(thumb => thumb.classList.remove('selected'));
+
+      // Ajoute la classe "selected" à la miniature cliquée
+      thumbnail.classList.add('selected');
+    }
+
+    // Ajouter des écouteurs sur les miniatures
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function () {
+        changeMainImage(this);
+      });
+    });
+
+    // Initialiser la première miniature comme sélectionnée
+    thumbnails[0].classList.add('selected');
+  });
+</script>

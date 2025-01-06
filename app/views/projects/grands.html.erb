@@ -1,7 +1,8 @@
-<nav class="navbar">
-    <div class="navbar-left">
+
+  <nav class="navbar">
+    <div class="navbar-left" id="accueil">
       <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
-      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+      <a href="<%= root_path %>"><strong>[</strong> Chloé Bretnacher <strong>]</strong></a>
     </div>
     <ul class="navbar-menu">
       <li><a href="<%= about_path %>">About</a></li>
@@ -10,37 +11,79 @@
       <p> | <p>
       <li><a href="<%= contact_path %>">Contact</a></li>
     </ul>
-</nav>
+  </nav>
 
 <div class="pres-projet-div">
   <div class="pres-projet">
     <div class="portfolio-container">
-        <div class="text-container">
-            <h1>Grands</h1>
-            <p>Grands est un projet réalisé en groupe de cinq lors de mon bootcamp au Wagon en Novembre 2024. C’est une marketplace (air-bnb like) que nous avons prototypée et codée en cinq jours.
-                Comme le sujet était relativement vaste, nous avons décidé d’y ajouter une pointe d’humour en réalisant un site web permettant de réserver des moments privilégiés avec des personnes âgées.<br><br>
-                Comme dans un CRUD classique, on y retrouve les fonctionnalités suivantes:<br>
-                - On peut retrouver les activités préférées des utilisateurs sur la page d’accueil.<br>
-                - On peut rechercher une activité grâce à un filtre de recherche, et retrouver sa localisation sur une map.<br>
-                - On peut voir les détails de l’activité.<br>
-                - On peut réserver une activité.<br>
-                - On peut retrouver ses réservations sur sa page de réservation.<br>
-                - On peut modifier/supprimer ses réservations.<br>
-                - En tant que personne âgée, on peut créer une activité et la modifier.<br>
-                - On peut retrouver son profil d’utilisateur.<br><br>
-               <strong>Framework:</strong> Ruby on Rails<br>
-               <strong>Langages:</strong> Ruby, JavaScript, SQL, HTML, CSS <br>
-               <strong>Gemmes:</strong> Bootstrap, Cloudinary, Geocoder, Devise, Simpleform </p>
-            <a href="<%= projects_path %>">Retour aux projets</a>
+      <div class="text-container">
+        <h1>Grands</h1>
+        <p>Grands est un projet réalisé en groupe de cinq lors de mon bootcamp au Wagon en Novembre 2024. C’est une marketplace (air-bnb like) que nous avons prototypée et codée en cinq jours.
+            Comme le sujet était relativement vaste, nous avons décidé d’y ajouter une pointe d’humour en réalisant un site web permettant de réserver des moments privilégiés avec des personnes âgées.<br><br>
+            Comme dans un CRUD classique, on y retrouve les fonctionnalités suivantes:<br>
+            - On peut retrouver les activités préférées des utilisateurs sur la page d’accueil.<br>
+            - On peut rechercher une activité grâce à un filtre de recherche, et retrouver sa localisation sur une map.<br>
+            - On peut voir les détails de l’activité.<br>
+            - On peut réserver une activité.<br>
+            - On peut retrouver ses réservations sur sa page de réservation.<br>
+            - On peut modifier/supprimer ses réservations.<br>
+            - En tant que personne âgée, on peut créer une activité et la modifier.<br>
+            - On peut retrouver son profil d’utilisateur.<br><br>
+           <strong>Framework:</strong> Ruby on Rails<br>
+           <strong>Langages:</strong> Ruby, JavaScript, SQL, HTML, CSS <br>
+           <strong>Gemmes:</strong> Bootstrap, Cloudinary, Geocoder, Devise, Simpleform </p>
+        <a href="<%= projects_path %>">Retour aux projets</a>
+      </div>
+
+      <div class="padding-carousel">
+        <!-- Carrousel -->
+        <div class="carousel-container">
+          <div class="main-image">
+            <img id="mainImage" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/1_j5s7d2.jpg" alt="Image principale">
+          </div>
         </div>
 
-        <div class="carousel-container">
-            <div class="carousel">
-                <img src="image1.jpg" alt="Image 1">
-                <img src="image2.jpg" alt="Image 2">
-                <img src="image3.jpg" alt="Image 3">
-            </div>
+        <!-- Miniatures -->
+        <div class="thumbnail-container">
+          <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/1_j5s7d2.jpg" alt="Image 1">
+          <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/2_zz9fay.jpg" alt="Image 2">
+          <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/3_t7prwd.jpg" alt="Image 3">
+          <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/4_ppfpgu.jpg" alt="Image 4">
+          <img class="thumbnail" src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736176436/6_rumhic.jpg" alt="Image 5">
         </div>
+      </div>
     </div>
   </div>
 </div>
+
+
+<!-- JavaScript -->
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Récupérer l'image principale et toutes les miniatures
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    // Fonction pour mettre à jour l'image principale et les miniatures
+    function changeMainImage(thumbnail) {
+      // Met à jour la source de l'image principale
+      mainImage.src = thumbnail.src;
+
+      // Supprime la classe "selected" des autres miniatures
+      thumbnails.forEach(thumb => thumb.classList.remove('selected'));
+
+      // Ajoute la classe "selected" à la miniature cliquée
+      thumbnail.classList.add('selected');
+    }
+
+    // Ajouter des écouteurs sur les miniatures
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function () {
+        changeMainImage(this);
+      });
+    });
+
+    // Initialiser la première miniature comme sélectionnée
+    thumbnails[0].classList.add('selected');
+  });
+</script>

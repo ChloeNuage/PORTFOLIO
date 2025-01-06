@@ -41,14 +41,6 @@
 }
 
 
-.navbar h1 {
-  font-family: "Inter";
-  font-size: 30pt;
-  font-weight: 400;
-  color: #132FBA;
-  padding-left: 1%;
-}
-
 .navbar p {
   font-family: "Inter";
   font-size: 18pt;
@@ -81,11 +73,24 @@
 }
 
 
-.navbar a {
+.navbar-menu a {
   text-decoration: none;
   color: #132FBA;
 
   &:hover {
     color: #799CF0 ;
+  }
+}
+
+#accueil a {
+  font-family: "Inter";
+  font-size: 30pt;
+  font-weight: 400;
+  color: #132FBA;
+  padding-left: 1%;
+  text-decoration: none;
+
+  &:hover {
+    color: #132FBA;
   }
 }

@@ -1,8 +1,8 @@
 
   <nav class="navbar">
-    <div class="navbar-left">
+    <div class="navbar-left" id="accueil">
       <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
-      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+      <a href="<%= root_path %>"><strong>[</strong> Chloé Bretnacher <strong>]</strong></a>
     </div>
     <ul class="navbar-menu">
       <li><a href="<%= about_path %>">About</a></li>
@@ -31,5 +31,7 @@
 
       <%= f.submit "Envoyer", class: "contact-form-button" %>
     <% end %>
+
   </div>
+
 </div>
