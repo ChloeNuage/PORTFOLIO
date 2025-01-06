@@ -1,0 +1,91 @@
+.navbar {
+  display: flex; /* Active Flexbox */
+  justify-content: space-between; /* Espace entre le logo et le menu */
+  align-items: center; /* Centre verticalement les éléments */
+  padding: 10px 20px;
+  background-color: #F8F6F0;
+  width: 100%; /* Ajoute de l'espace autour */
+}
+
+/* Section gauche : logo et texte */
+.navbar-left {
+  display: flex; /* Permet d'aligner le logo et le texte en ligne */
+  align-items: center;
+  flex: 2;  /* Centre verticalement le logo et le texte */
+}
+
+.logo {
+  height: 65px; /* Taille du logo */
+  margin-right: 10px; /* Espacement entre le logo et le texte */
+}
+
+.logo-text {
+  font-size: 1.5rem; /* Taille du texte du logo */
+  font-weight: bold; /* Met le texte en gras */
+  color: #0044cc; /* Met en gras */
+}
+
+.navbar-menu {
+  display: flex; /* Met les liens du menu en ligne */
+  list-style: none; /* Supprime les puces des éléments */
+  margin: 0; /* Supprime la marge par défaut */
+  padding: 0; /* Supprime le padding par défaut */
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.navbar-menu li {
+  font-size: 1rem;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+
+.navbar h1 {
+  font-family: "Inter";
+  font-size: 30pt;
+  font-weight: 400;
+  color: #132FBA;
+  padding-left: 1%;
+}
+
+.navbar p {
+  font-family: "Inter";
+  font-size: 18pt;
+  font-weight: 600;
+  color: #132FBA;
+}
+
+
+.navbar  ul {
+  font-family: "Inter";
+  font-size: 20pt;
+  font-weight: 800;
+  color: #132FBA;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.navbar li {
+  font-family: "Inter";
+  font-size: 20pt;
+  font-weight: 800;
+  color: #132FBA;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+.navbar strong {
+  font-weight: 700;
+}
+
+
+.navbar a {
+  text-decoration: none;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}

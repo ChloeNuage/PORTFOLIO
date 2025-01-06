@@ -1,27 +1,48 @@
-<div>
-  <div>
-    <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
-  </div>
-  <div>
-    <ul>
+<nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
+      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+    </div>
+    <ul class="navbar-menu">
       <li><a href="<%= about_path %>">About</a></li>
+      <p> | <p>
       <li><a href="<%= projects_path %>">Projets</a></li>
+      <p> | <p>
       <li><a href="<%= contact_path %>">Contact</a></li>
     </ul>
-  </div>
-</div>
+</nav>
 
-<div>
-  <div>
-    <h1>Spark</h1>
-    <p>Description du projet Spark...</p>
-    <a href="<%= projects_path %>">Retour aux projets</a>
-  </div>
-  <div>
-    Images
-  </div>
-</div>
+<div class="pres-projet-div">
+  <div class="pres-projet">
+    <div class="portfolio-container">
+        <div class="text-container">
+            <h1>Spark</h1>
+            <p>Spark est initialement un projet de recherche réalisé à l'occasion de mon mémoire de Master of Arts en Design stratégique (2021). C’est une application qui permet aux potentiels adoptants de matcher avec les animaux des refuges de sa région. À l’occasion du projet d’application web pour le bootcamp du Wagon, j’ai pu présenter ce projet et il a été sélectionné pour être développé lors des deux dernières semaines de formation en équipe de cinq.
+            Le projet a ensuite été présenté devant un public à l’occasion du Démo Day du 6 décembre 2024.<br><br>
+            Nous avons complètement repensé le design de l’application avec une nouvelle charte graphique et de nouvelles illustrations.<br><br>
+            Concernant ses fonctionnalités, nous retrouvons:<br>
+            - La présentation de l’application lors de sa première connexion.<br>
+            - Le nouvel utilisateur doit remplir un formulaire afin de collecter des données sur son mode de vie et son projet d’adoption.<br>
+            - Lorsqu’il soumet le formulaire, l’utilisateur peut voir ses résultats.<br>
+            - Il arrive enfin sur la page principale de l’application où il peut voir les animaux qui lui sont proposés en fonction des réponses au formulaire.<br>
+            - Il peut cliquer sur le profil pour voir les détails de l’animal et matcher avec lui.<br>
+            - Il peut discuter avec le refuge qui s’occupe de l’animal avec lequel il a matché et retrouver ses matchs et ses discussions sur une page spécifique.<br>
+            - L’utilisateur du refuge peut proposer un rendez-vous depuis la discussion au potentiel adoptant.<br>
+            - L’adoptant peut accepter le rendez-vous.<br>
+            - L’adoptant peut retrouver ses informations de profil sur sa page et y retrouver ses rendez-vous.<br><br>
+               <strong>Framework:</strong> Ruby on Rails<br>
+               <strong>Langages:</strong> Ruby, JavaScript, SQL, HTML, CSS <br>
+               <strong>Gemmes:</strong> Bootstrap, Cloudinary, Solid Cable, Devise, Simpleform </p>
+            <a href="<%= projects_path %>">Retour aux projets</a>
+        </div>
 
-
-<div>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+  </div>
 </div>

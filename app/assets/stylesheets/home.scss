@@ -4,14 +4,20 @@
   padding: 20px;
 }
 
+#logo-home {
+  width: 20%;
+  margin-top: -3%;
+  margin-left: 6%;
+}
 .home-div h1 {
   font-family: "Inter";
   font-size: 50pt;
   font-weight: 300;
   color: #132FBA;
-  margin-bottom: 13%;
+  margin-bottom: 20%;
   margin-top: 3%;
   margin-left: 2%;
+  width: 140%;
 }
 
 .home-div h2 {
@@ -31,26 +37,43 @@
   color: #132FBA;
 }
 
-.home-div ul, li {
+.home-div ul {
   font-family: "Inter";
   font-size: 40pt;
   font-weight: 300;
-  padding-left: 35%;
+  padding-left: 34%;
   color: #132FBA;
   text-decoration: none;
   list-style-type: none;
   line-height: 110%;
 }
 
-strong {
+.home-div li {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 300;
+  padding-left: 34%;
+  color: #132FBA;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 110%;
+}
+
+.home-div strong {
   font-weight: 600;
 }
 
-a {
+.home-div a {
   text-decoration: none;
   color: #132FBA;
 
   &:hover {
     color: #799CF0 ;
   }
+}
+
+
+.display-title {
+  display: flex;
+  margin-bottom: 8%;
 }

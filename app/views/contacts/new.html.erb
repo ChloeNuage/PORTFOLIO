@@ -1,0 +1,35 @@
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
+      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+    </div>
+    <ul class="navbar-menu">
+      <li><a href="<%= about_path %>">About</a></li>
+      <p> | <p>
+      <li><a href="<%= projects_path %>">Projets</a></li>
+      <p> | <p>
+      <li><a href="<%= contact_path %>">Contact</a></li>
+    </ul>
+  </nav>
+
+
+<div class="contact-div">
+  <div class="contact-form">
+    <h1>Contact</h1>
+    <%= form_with model: @contact, url: contacts_path, local: true do |f| %>
+      <%= csrf_meta_tags %>
+
+      <label for="name">Nom</label><br>
+      <%= f.text_field :name, required: true %><br>
+
+      <label for="email">Email</label><br>
+      <%= f.email_field :email, required: true %><br>
+
+      <label for="message">Message</label><br>
+      <%= f.text_area :message, required: true %><br>
+
+      <%= f.submit "Envoyer", class: "contact-form-button" %>
+    <% end %>
+  </div>
+</div>

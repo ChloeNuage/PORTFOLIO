@@ -1,0 +1,68 @@
+.about-div {
+  background-color: #F8F6F0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+
+.about-div a {
+  text-decoration: none;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
+
+.about {
+  display: flex;
+  width: 100%; /* S'assure que le conteneur occupe toute la largeur */
+  gap: 10px;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 2%;
+  padding-top: 3%;
+}
+
+.about-text {
+  padding-top: 5%; /* Ajoute un peu d'espace autour du texte */
+  box-sizing: border-box;
+  padding-left: 20%;
+}
+
+.about-image {
+  justify-content: flex-end;
+  margin-left: 7%;
+}
+
+.about-image img {
+  max-width: 85%; /* Assure que l'image s'adapte au conteneur */
+  height: auto;
+}
+
+.about-div h1 {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 800;
+  color: #132FBA;
+  margin-bottom: 10%;
+}
+
+.about-div p {
+  font-family: "Inter";
+  font-size: 14pt;
+  font-weight: 300;
+  color: #132FBA;
+  line-height: 116%;
+}
+
+
+.about-text, .about-image {
+  flex: 1; /* Donne à chaque div une taille égale */
+}
+
+.about-div a {
+  font-weight: 800;
+  font-size: 20px;
+  font-style: italic;
+}

@@ -1,0 +1,118 @@
+.index-projets-div {
+  background-color: #F8F6F0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.index-projets {
+  display: flex;
+  width: 100%; /* S'assure que le conteneur occupe toute la largeur */
+  gap: 10px;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 2%;
+  padding-top: 3%;
+}
+
+.index-projets-text {
+  padding-top: 5%; /* Ajoute un peu d'espace autour du texte */
+  box-sizing: border-box;
+  padding-left: 20%;
+  flex: 1;
+}
+
+.index-projets-div h1 {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 800;
+  color: #132FBA;
+  margin-bottom: 6%;
+}
+
+.index-projets-div p {
+  font-family: "Inter";
+  font-size: 14pt;
+  font-weight: 300;
+  color: #132FBA;
+  line-height: 116%;
+}
+
+
+.projets-list a {
+  font-weight: 400;
+  font-size: 40px;
+  text-decoration: none;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
+
+.projets-list {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 110%;
+  margin-bottom: 6%;
+}
+
+.link-list a {
+  font-weight: 400;
+  font-size: 25px;
+  font-style: italic;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
+
+.link-list {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 110%;
+  margin-bottom: 6%;
+}
+
+.retour {
+  margin: 0;
+  padding: 0;
+}
+
+.retour a{
+  font-style: italic;
+  text-decoration: none!important;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
+
+//Réseaux sociaux
+
+.social-links {
+  margin-top: 3%;
+  list-style: none;
+  display: flex;
+  gap: 15px; /* Espacement entre les icônes */
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+}
+
+.social-links a {
+  font-size: 30px; /* Taille des icônes */
+  color: #132FBA; /* Couleur des icônes (tu peux la personnaliser) */
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* Couleur au survol (ici un bleu pour LinkedIn) */
+}
+
+.social-links a i {
+  transition: color 0.3s ease;
+}

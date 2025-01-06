@@ -1,27 +1,41 @@
-<div>
-  <div>
-    <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
-  </div>
-  <div>
-    <ul>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="https://res.cloudinary.com/dsdxs3b1q/image/upload/v1736090416/Frame_1-2_jgfhfm.png" alt="logo" class="logo">
+      <h1> <strong>[</strong> Chloé Bretnacher <strong>]</strong></h1>
+    </div>
+    <ul class="navbar-menu">
       <li><a href="<%= about_path %>">About</a></li>
+      <p> | <p>
       <li><a href="<%= projects_path %>">Projets</a></li>
+      <p> | <p>
       <li><a href="<%= contact_path %>">Contact</a></li>
     </ul>
-  </div>
-</div>
+  </nav>
 
-<div>
-  <h1>Projets</h1>
-  <ul>
-    <li><a href="<%= spark_path %>">Spark</a></li>
-    <li><a href="<%= grands_path %>">Grands</a></li>
-  </ul>
-  <ul>
-    <li><a href="https://chloebretnacher.wixsite.com/my-site-3">Design Portfolio</a></li>
-    <li><a href="">Télécharger mon CV</a></li>
-  </ul>
-  <a href="<%= root_path %>">Retour à l'accueil</a>
-</div>
-<div>
+<div class="index-projets-div">
+
+
+  <div class="index-projets">
+    <div class="index-projets-text">
+      <h1>Projets</h1>
+       <ul class="projets-list">
+        <li><a href="<%= spark_path %>">Spark</a></li>
+        <li><a href="<%= grands_path %>">Grands</a></li>
+      </ul>
+      <ul class="link-list">
+        <li><a href="https://chloebretnacher.wixsite.com/my-site-3">Design Portfolio</a></li>
+        <li><a href="https://drive.google.com/uc?export=download&id=1AKGb3JJbGlZ8AP19C1ff19b6z7a1SQkW" download>Télécharger mon CV</a></li>
+      </ul>
+      <div class="retour">
+        <a href="<%= root_path %>">Retour à l'accueil</a>
+      </div>
+      <ul class="social-links">
+        <li><a href="https://www.linkedin.com/in/chloé-bretnacher/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://github.com/ChloeNuage" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.instagram.com/nuagecreate/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
 </div>

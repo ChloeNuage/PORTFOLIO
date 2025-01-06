@@ -1,0 +1,85 @@
+.pres-projet-div {
+  background-color: #F8F6F0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.pres-projet-div h1 {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 800;
+  color: #132FBA;
+  margin-bottom: 10%;
+}
+
+.pres-projet-div strong {
+  font-weight: 600;
+}
+
+.pres-projet {
+  display: flex;
+  width: 100%; /* S'assure que le conteneur occupe toute la largeur */
+  gap: 10px;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 2%;
+  padding-top: 3%;
+}
+
+.pres-projet-div p {
+  font-family: "Inter";
+  font-size: 15pt;
+  font-weight: 300;
+  color: #132FBA;
+  line-height: 116%;
+}
+
+.pres-projet-div a {
+  font-family: "Inter";
+  font-size: 15pt;
+  font-weight: 400;
+  color: #132FBA;
+  margin-bottom: 1%;
+  font-style: italic;
+  text-decoration: none!important;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.text-container {
+  padding-left: 10%;
+  width: 45%;
+  margin-top: 5%;
+}
+
+
+.carousel-container {
+  width: 45%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-container:hover .carousel {
+  transform: translateX(-100%);
+}

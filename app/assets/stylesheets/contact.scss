@@ -1,0 +1,77 @@
+.contact-div {
+  background-color: #F8F6F0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.contact-div  h1 {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 800;
+  color: #132FBA;
+  margin-bottom: 3%;
+}
+
+.contact-form {
+  padding-top: 5%; /* Ajoute un peu d'espace autour du texte */
+  box-sizing: border-box;
+  padding-left: 20%;
+}
+
+.contact-form label {
+  font-family: "Inter";
+  font-size: 20pt;
+  font-weight: 400;
+  color: #132FBA;
+  margin-bottom: 1%;
+}
+
+.contact-form form {
+  padding-left: 10%;
+}
+
+
+.contact-form input, textarea {
+  background-color: #F8F6F0;
+  border: #132FBA 2px solid;
+  font-family: "Inter";
+  font-size: 15pt;
+  font-weight: 400;
+  color: #132FBA;
+  margin-bottom: 2%;
+  width: 55%;
+  padding: 1%;
+}
+
+.contact-form input {
+ height: 40px;
+}
+
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form-button {
+  background-color: #F8F6F0;
+  border: #132FBA 2px solid;
+  font-family: "Inter";
+  font-size: 18pt;
+  font-weight: 400;
+  color: #132FBA;
+  padding: 0;
+
+  display: inline-block; /* Utilise inline-block pour ajuster la taille au contenu */
+  width: auto !important; /* Force la largeur à être automatique */
+  max-width: none !important; /* Supprime les limites de largeur */
+  margin-left: 0; /* Aligne le bouton à gauche */
+  line-height: 0.9; /* Permet au texte d'être bien centré verticalement */
+  text-align: center; /* Centre le texte horizontalement */
+  vertical-align: middle;
+  transition: background-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: #132FBA;
+    color: #F8F6F0;
+  }
+}

@@ -1,0 +1,41 @@
+.thankyou-div {
+  background-color: #F8F6F0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.thankyou-div  h1 {
+  font-family: "Inter";
+  font-size: 40pt;
+  font-weight: 800;
+  color: #132FBA;
+  margin-bottom: 2%;
+}
+
+.thankyou-div  p {
+  font-family: "Inter";
+  font-size: 28pt;
+  font-weight: 400;
+  color: #132FBA;
+  margin-bottom: 4%;
+}
+
+.thankyou-text {
+  padding-top: 13%; /* Ajoute un peu d'espace autour du texte */
+  text-align: center;
+}
+
+.thankyou-div  a {
+  font-family: "Inter";
+  font-size: 18pt;
+  font-weight: 400;
+  color: #132FBA;
+  margin-bottom: 1%;
+  font-style: italic;
+  text-decoration: none!important;
+  color: #132FBA;
+
+  &:hover {
+    color: #799CF0 ;
+  }
+}
